@@ -1,7 +1,8 @@
 import Database from 'better-sqlite3';
 import path from 'path';
 
-const dbPath = path.join(process.cwd(), 'glashaus.db');
+// Railway Volume oder lokaler Pfad
+const dbPath = process.env.DATABASE_PATH || path.join(process.cwd(), 'glashaus.db');
 export const db = new Database(dbPath);
 
 // UTF-8 Encoding aktivieren
