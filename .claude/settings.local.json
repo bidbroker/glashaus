@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(sqlite3:*)",
+      "Bash(taskkill:*)",
+      "Bash(tasklist:*)",
+      "Bash(netstat:*)",
+      "Bash(node:*)",
+      "Bash(powershell:*)",
+      "Bash(ls:*)",
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Bash(export:*)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth:*)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo:*)",
+      "Bash(npm list:*)",
+      "Bash(vercel:*)",
+      "Bash(npm install:*)",
+      "Bash(railway:*)",
+      "WebFetch(domain:glashaus-production.up.railway.app)",
+      "Bash(rm:*)",
+      "Bash(rmdir scripts:*)"
+    ]
+  }
+}
