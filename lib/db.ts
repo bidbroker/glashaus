@@ -2,7 +2,15 @@ import Database from 'better-sqlite3';
 import path from 'path';
 
 // Railway Volume oder lokaler Pfad
-const dbPath = process.env.DATABASE_PATH || path.join(process.cwd(), 'glashaus.db');
+const getDbPath = () => {
+  // Prüfe Railway Volume
+  const volumePath = '/data/glashaus.db';
+  if (process.env.RAILWAY_ENVIRONMENT && require('fs').existsSync('/data')) {
+    return volumePath;
+  }
+  return process.env.DATABASE_PATH || path.join(process.cwd(), 'glashaus.db');
+};
+const dbPath = getDbPath();
 export const db = new Database(dbPath);
 
 // UTF-8 Encoding aktivieren
